@@ -70,7 +70,7 @@ docker-compose up -d --build
 
 Este comando descargará PostgreSQL 17, ejecutará de forma automática el script init.sql para crear la base de datos con sus restricciones y llenara la base de datos con 105 registros.
 
-3. Ejecutar el Menú Interactivo (CLI)
+    3. Ejecutar el Menú Interactivo (CLI)
 Para interactuar con el sistema y ejecutar las 20 consultas complejas, lanza el contenedor de la aplicación en modo interactivo con el siguiente comando:
 docker-compose run --rm app
 
