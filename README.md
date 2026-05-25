@@ -51,16 +51,16 @@ El diseño del consultorio médico abarca las siguientes 8 entidades perfectamen
 ├── menu.py                # Interfaz de línea de comandos interactiva (CLI)
 └── README.md              # Documentación general del proyecto
 
-Requisitos Previos
+_Requisitos Previos_
 El único requisito de software para ejecutar este proyecto es tener instalado y en ejecución:
     Docker Desktop (o Docker Engine en entornos Linux).
 
-Instrucciones de Instalación y Despliegue
+_Instrucciones de Instalación y Despliegue_
 Sigue estos pasos en orden desde la terminal de tu sistema (asegúrate de estar posicionado en la raíz de la carpeta del proyecto):
 
     1. Configurar las Variables de Entorno (Seguridad):
 Crea una copia del archivo .env.example y renómbrala como .env:
-cp .env.example .env
+cp ==.env.example .env==
 Abre el archivo .env recién creado con tu editor de texto preferido y define tus credenciales personalizadas (el archivo .gitignore evitará que este archivo se suba a GitHub):
 
 Fragmento de código
@@ -70,13 +70,13 @@ DB_NAME=consultorio
 
     2. Construir y Levantar los Servicios
 Para compilar la aplicación por primera vez y descargar las imágenes del motor de base de datos, ejecuta:
-docker-compose up -d --build
+==docker-compose up -d --build==
 
 Este comando descargará PostgreSQL 17, ejecutará de forma automática el script init.sql para crear la base de datos con sus restricciones y llenara la base de datos con 105 registros.
 
     3. Ejecutar el Menú Interactivo (CLI)
 Para interactuar con el sistema y ejecutar las 20 consultas complejas, lanza el contenedor de la aplicación en modo interactivo con el siguiente comando:
-docker-compose run --rm app
+==docker-compose run --rm app==
 
 A partir de este momento, se desplegará un menú numérico en tu terminal donde podrás seleccionar cualquier opción para visualizar simultáneamente su representación en:
 
@@ -85,14 +85,14 @@ A partir de este momento, se desplegará un menú numérico en tu terminal donde
 3.Cálculo Relacional de Dominios (CRD)
 4.Sentencia SQL ejecutable con resultados en tiempo real.
 
-Control y Mantenimiento de Contenedores
+_Control y Mantenimiento de Contenedores_
 Para gestionar el ciclo de vida del entorno de contenedores en segundo plano, utiliza los siguientes comandos estándar:
 
 Verificar el estado de los servicios:
-docker-compose ps
+==docker-compose ps==
 
 Pausar el sistema (Detener sin borrar datos):
-docker-compose stop
+==docker-compose stop==
 
 Apagar y limpiar el entorno por completo (Recomendado al finalizar):
-docker-compose down
+==docker-compose down==
