@@ -1,0 +1,26 @@
+
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: consultorio_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: consultorio
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app:
+    build: .
+    container_name: consultorio_app
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_NAME: consultorio
+      DB_USER: admin
+      DB_PASS: password123
+    stdin_open: true
+    tty: true        
