@@ -1,5 +1,6 @@
 # Sistema de Gestión de Consultorio Médico 
 Equipo:
+    
     Flores Vargas Augusto Hazel
 
     Linares Medina Fernando Agustín
