@@ -41,7 +41,7 @@ El diseño del consultorio médico abarca las siguientes 8 entidades perfectamen
 
 ## 📂 Estructura del Proyecto
 
-```text
+
 .
 ├── docker-compose.yml     # Orquestador de servicios (Base de datos y Aplicación)
 ├── Dockerfile             # Receta de construcción para el contenedor de Python
@@ -96,3 +96,4 @@ Pausar el sistema (Detener sin borrar datos):
 
 Apagar y limpiar el entorno por completo (Recomendado al finalizar):
 ==docker-compose down==
+```text
