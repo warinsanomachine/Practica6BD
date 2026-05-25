@@ -58,19 +58,9 @@ El único requisito de software para ejecutar este proyecto es tener instalado y
 **Instrucciones de Instalación y Despliegue**
 Sigue estos pasos en orden desde la terminal de tu sistema (asegúrate de estar posicionado en la raíz de la carpeta del proyecto):
 
-    1. Configurar las Variables de Entorno (Seguridad):
-Crea una copia del archivo .env.example y renómbrala como .env:
-cp ==.env.example .env==
-Abre el archivo .env recién creado con tu editor de texto preferido y define tus credenciales personalizadas (el archivo .gitignore evitará que este archivo se suba a GitHub):
-
-Fragmento de código
-DB_USER=admin
-DB_PASS=tu_contraseña_secreta
-DB_NAME=consultorio
-
     2. Construir y Levantar los Servicios
 Para compilar la aplicación por primera vez y descargar las imágenes del motor de base de datos, ejecuta:
-==docker-compose up -d --build==
+_docker-compose up -d --build_
 
 Este comando descargará PostgreSQL 17, ejecutará de forma automática el script init.sql para crear la base de datos con sus restricciones y llenara la base de datos con 105 registros.
 
