@@ -51,11 +51,11 @@ El diseño del consultorio médico abarca las siguientes 8 entidades perfectamen
 ├── menu.py                # Interfaz de línea de comandos interactiva (CLI)
 └── README.md              # Documentación general del proyecto
 
-_Requisitos Previos_
+**Requisitos Previos**
 El único requisito de software para ejecutar este proyecto es tener instalado y en ejecución:
     Docker Desktop (o Docker Engine en entornos Linux).
 
-_Instrucciones de Instalación y Despliegue_
+**Instrucciones de Instalación y Despliegue**
 Sigue estos pasos en orden desde la terminal de tu sistema (asegúrate de estar posicionado en la raíz de la carpeta del proyecto):
 
     1. Configurar las Variables de Entorno (Seguridad):
@@ -85,7 +85,7 @@ A partir de este momento, se desplegará un menú numérico en tu terminal donde
 3.Cálculo Relacional de Dominios (CRD)
 4.Sentencia SQL ejecutable con resultados en tiempo real.
 
-_Control y Mantenimiento de Contenedores_
+**Control y Mantenimiento de Contenedores**
 Para gestionar el ciclo de vida del entorno de contenedores en segundo plano, utiliza los siguientes comandos estándar:
 
 Verificar el estado de los servicios:
