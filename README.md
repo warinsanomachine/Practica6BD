@@ -24,6 +24,7 @@ El diseño del consultorio médico abarca las siguientes 8 entidades perfectamen
 ├──doctores
 ├──citas 
 ├──mensajes
+<img width="1128" height="767" alt="image" src="https://github.com/user-attachments/assets/0b0b9726-8dd6-4d6f-9aed-cf32a078d032" />
 
 ---
 
