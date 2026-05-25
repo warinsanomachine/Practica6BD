@@ -4,9 +4,9 @@ services:
     image: postgres:17-alpine
     container_name: consultorio_db
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: password123
-      POSTGRES_DB: consultorio
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
     ports:
       - "5432:5432"
     volumes:
@@ -19,8 +19,8 @@ services:
       - db
     environment:
       DB_HOST: db
-      DB_NAME: consultorio
-      DB_USER: admin
-      DB_PASS: password123
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
     stdin_open: true
     tty: true        
