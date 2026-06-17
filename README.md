@@ -1,10 +1,6 @@
-Aquí tienes una versión corregida, estructurada y mejorada de tu archivo `README.md`.
-
-Se corrigieron errores ortográficos (como acentos y errores de dedo), se estandarizó el formato de los comandos utilizando bloques de código adecuados (reemplazando los `=` y `_` que causaban inconsistencias) y se agregó el **Paso 1** en la instalación, ya que el archivo original saltaba directamente al paso 2 omitiendo la configuración del archivo `.env`.
 
 ---
 
-```markdown
 # Sistema de Gestión de Consultorio Médico
 
 ### 👥 Equipo de Desarrollo
