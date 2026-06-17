@@ -1,3 +1,10 @@
+Aquí tienes una versión corregida, estructurada y mejorada de tu archivo `README.md`.
+
+Se corrigieron errores ortográficos (como acentos y errores de dedo), se estandarizó el formato de los comandos utilizando bloques de código adecuados (reemplazando los `=` y `_` que causaban inconsistencias) y se agregó el **Paso 1** en la instalación, ya que el archivo original saltaba directamente al paso 2 omitiendo la configuración del archivo `.env`.
+
+---
+
+```markdown
 # Sistema de Gestión de Consultorio Médico
 
 ### 👥 Equipo de Desarrollo
@@ -48,6 +55,7 @@ El diseño de la base de datos del consultorio médico abarca **8 entidades** pe
 
 ## 📂 Estructura del Proyecto
 
+```text
 .
 ├── docker-compose.yml     # Orquestador de servicios (Base de datos y Aplicación)
 ├── Dockerfile             # Receta de construcción para el contenedor de Python
@@ -56,56 +64,89 @@ El diseño de la base de datos del consultorio médico abarca **8 entidades** pe
 ├── init.sql               # Script de inicialización (DDL y DML de 105 tuplas)
 ├── menu.py                # Interfaz de línea de comandos interactiva (CLI)
 └── README.md              # Documentación general del proyecto
+
+```
+
 ---
-📋 Requisitos Previos
+
+## 📋 Requisitos Previos
+
 El único requisito de software para ejecutar este proyecto es tener instalado y en ejecución:
 
-Docker Desktop (o Docker Engine en entornos Linux).
+* **Docker Desktop** (o Docker Engine en entornos Linux).
 
-🚀 Instrucciones de Instalación y Despliegue
+---
+
+## 🚀 Instrucciones de Instalación y Despliegue
+
 Sigue estos pasos en orden desde la terminal de tu sistema (asegúrate de estar posicionado en la raíz de la carpeta del proyecto):
 
-1. Configurar las Variables de Entorno
-Antes de levantar los servicios, crea un archivo .env local clonando la plantilla provista en el repositorio:
+### 1. Configurar las Variables de Entorno
 
-Bash
+Antes de levantar los servicios, crea un archivo `.env` local clonando la plantilla provista en el repositorio:
+
+```bash
 cp .env.example .env
-(Puedes abrir el archivo .env y ajustar las credenciales de la base de datos si lo consideras necesario).
 
-2. Construir y Levantar los Servicios
+```
+
+*(Puedes abrir el archivo `.env` y ajustar las credenciales de la base de datos si lo consideras necesario).*
+
+### 2. Construir y Levantar los Servicios
+
 Para compilar la aplicación por primera vez y descargar las imágenes del motor de base de datos, ejecuta:
 
-Bash
+```bash
 docker-compose up -d --build
-Este comando descargará PostgreSQL 17, ejecutará de forma automática el script init.sql para estructurar las tablas con sus respectivas restricciones y llenará la base de datos con un total de 105 registros.
 
-3. Ejecutar el Menú Interactivo (CLI)
+```
+
+Este comando descargará PostgreSQL 17, ejecutará de forma automática el script `init.sql` para estructurar las tablas con sus respectivas restricciones y llenará la base de datos con un total de 105 registros.
+
+### 3. Ejecutar el Menú Interactivo (CLI)
+
 Para interactuar con el sistema y ejecutar las 20 consultas complejas, lanza el contenedor de la aplicación en modo interactivo con el siguiente comando:
 
-Bash
+```bash
 docker-compose run --rm app
+
+```
+
 A partir de este momento, se desplegará un menú numérico en tu terminal donde podrás seleccionar cualquier opción para visualizar simultáneamente su representación en:
 
-Álgebra Relacional
+1. **Álgebra Relacional**
+2. **Cálculo Relacional de Tuplas (CRT)**
+3. **Cálculo Relacional de Dominios (CRD)**
+4. **Sentencia SQL** ejecutable con resultados reflejados en tiempo real.
 
-Cálculo Relacional de Tuplas (CRT)
+---
 
-Cálculo Relacional de Dominios (CRD)
+## 🔄 Control y Mantenimiento de Contenedores
 
-Sentencia SQL ejecutable con resultados reflejados en tiempo real.
-
-🔄 Control y Mantenimiento de Contenedores
 Para gestionar el ciclo de vida del entorno de contenedores en segundo plano, utiliza los siguientes comandos estándar:
 
-Verificar el estado de los servicios:
-
-Bash
+* **Verificar el estado de los servicios:**
+```bash
 docker-compose ps
-Pausar el sistema (Detiene los contenedores temporalmente sin borrar los datos):
 
-Bash
+```
+
+
+* **Pausar el sistema** (Detiene los contenedores temporalmente sin borrar los datos):
+```bash
 docker-compose stop
-Apagar y limpiar el entorno por completo (Recomendado al finalizar el uso para liberar recursos del sistema):
 
-Bash
+```
+
+
+* **Apagar y limpiar el entorno por completo** (Recomendado al finalizar el uso para liberar recursos del sistema):
+```bash
 docker-compose down
+
+```
+
+
+
+```
+
+```
